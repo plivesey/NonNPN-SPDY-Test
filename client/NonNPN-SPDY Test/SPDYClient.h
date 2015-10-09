@@ -10,6 +10,6 @@
 
 @interface SPDYClient : NSObject
 
-- (void)sendMessage:(NSString *)payload;
+- (void)sendMessage;
 
 @end

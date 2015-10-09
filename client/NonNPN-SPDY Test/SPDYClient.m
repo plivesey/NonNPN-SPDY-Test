@@ -31,12 +31,9 @@
     return self;
 }
 
-- (void)sendMessage:(NSString *)payload {
-    NSData *pubData=[payload dataUsingEncoding:NSUTF8StringEncoding];
-    
+- (void)sendMessage {
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://127.0.0.1:3232/"]];
-    [request setHTTPMethod:@"POST"];
-    [request setHTTPBody:pubData];
+    [request setHTTPMethod:@"GET"];
     
     NSURLConnection *connection = [NSURLConnection connectionWithRequest:request delegate:self];
     [connection start];

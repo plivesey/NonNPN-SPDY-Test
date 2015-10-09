@@ -36,10 +36,7 @@
 - (void)testSending {
     NSDate *now = [NSDate new];
     NSLog(@"begin time %@", now);
-    for (NSUInteger i = 0; i < 100; i++) {
-        [_client sendMessage:[NSString stringWithFormat:@"the %d nd message", i]];
-    }
-    
+    [_client sendMessage];
 }
 
 
